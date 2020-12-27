@@ -1,0 +1,16 @@
+{% include 'parse_text/navigation.html' %}
+{% block content %}
+<div class="mt-4 container">
+    <div class="row justify-content-md-center">
+        <div class="col-6">
+            <div class="mt-4 container">
+                {% for doc in documents %}
+                    <div class="row">
+                        <a href="/result/{{ doc.id }}">{{ doc.name }}</a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

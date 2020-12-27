@@ -1,0 +1,17 @@
+{% include 'parse_text/navigation.html' %}
+{% block content %}
+<div class="mt-4 container">
+    <div class="row justify-content-md-center">
+        <div class="col-6">
+            <div class="mt-4 container">
+                <div class="row">
+                    <h1>Руководство пользователя</h1>
+                    <p>Для поиска введите запрос в поле на странице <a href="{% url 'search' %}">поиска</a> и нажмите на кнопку "Ввод".
+                    </p>
+                    <p>Для <a href="{% url 'upload' %}">загрузки</a> файла выберете текстовый документ и нажмите "Отправить"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

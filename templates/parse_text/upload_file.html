@@ -1,0 +1,29 @@
+{% include 'parse_text/navigation.html' %}
+{% block content %}
+
+
+<div class="mt-4 container">
+    <div class="row justify-content-md-center">
+        <div class="col-6">
+            <div class="mt-4 container">
+                <div class="row">
+                    <form enctype="multipart/form-data" method="post">
+                        {% csrf_token %}
+                        <h1>Загрузка</h1>
+                       <p>Загрузите ваш документ на сервер</p>
+                       <p><input type="file" name="file" multiple accept="text/plain">
+                       <input type="submit" value="Отправить"></p>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Тема документа:</label>
+                            <select class="form-control" name="theme" id="exampleFormControlSelect1">
+                              <option>Научные статьи по computer science</option>
+                              <option>Сочинения по литературе</option>
+                            </select>
+                          </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% include 'parse_text/navigation.html' %}
+{% block content %}
+
+
+<div class="mt-4 container">
+    <div class="row justify-content-md-center">
+        <div class="col-6">
+            <div class="mt-4 container">
+                <div class="row">
+                    <h2>{{ note.document_id.name }}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mt-4 container">
+    <div class="row">
+        <strong>Текст </strong><p>{{ note.document_id.text }}</p>
+    </div>
+</div>
+<div class="mt-4 container">
+    <div class="row justify-content-md-center">
+        <div class="col-6">
+            <div class="mt-4 container">
+                <div class="row">
+                    <h2>Конспект для {{ note.document_id.name }}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mt-4 container">
+    <div class="row">
+        <strong>Текст: </strong><p>{{ note.text }}</p>
+    </div>
+</div>
+
+<div class="mt-4 container">
+    <div class="row justify-content-md-center">
+        <div class="col-6">
+            <div class="mt-4 container">
+                <div class="row">
+                    <h2>Конспект для {{ note.document_id.name }} с помощью машинного обучения</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mt-4 container">
+    <div class="row">
+        <strong>Текст: </strong><p>{{ note.text_for_ml }}</p>
+    </div>
+</div>
+{% endblock %}
